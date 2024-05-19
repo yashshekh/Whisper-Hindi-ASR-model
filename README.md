@@ -1,4 +1,4 @@
-# Whisper-Hindi Model-Assignment-
+# Whisper-Hindi Model-
 Whisper is an automatic speech recognition (ASR) system trained on 680,000 hours of multilingual and multitask supervised data collected from the web.We show that the use of such a large and diverse dataset leads to improved robustness to accents, background noise and technical language.  It enables transcription in multiple languages, as well as translation from those languages into English. We are open-sourcing models and inference code to serve as a foundation for building useful applications and for further research on robust speech processing.
 
 ### Links
@@ -8,17 +8,7 @@ Whisper is an automatic speech recognition (ASR) system trained on 680,000 hours
 4. [Test Dataset](https://asr.iitm.ac.in/Gramvaani/NEW/GV_Eval_3h.tar.gz)
 
 ```bash
-Hello,
 
-Are you still looking for the internship at IIT Bombay for the Machine Learning Profile?
-If Yes then Kindly do this task. we expect you to complete a short assignment that just takes one day. But we are providing 7 days to complete.  
-
-You must implement the Whisper Hindi (Automatic Speech Recognition) ASR model. Also calculate the WER for Kathbath dataset.
-
-Thanking You
-Ayush
-IIT Bombay
-```
 
 ![](https://images.openai.com/blob/d9c13138-366f-49d3-b8bd-cb3f5a973a5b/asr-summary-of-model-architecture-desktop.svg?width=10&height=10&quality=50)
 
