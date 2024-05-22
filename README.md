@@ -29,3 +29,6 @@ WER is calculated as the ratio of the total number of errors (insertions, deleti
 WER provides a comprehensive assessment of the accuracy of ASR systems, taking into account both misrecognitions and omissions of words in the transcription. Lower WER values indicate higher accuracy, with a perfect score of 0 indicating an exact match between the transcribed and reference texts.
 
 WER is a widely used evaluation metric in the field of speech recognition, providing valuable insights into the performance and quality of ASR models across different languages and applications.
+
+
+A Transformer sequence-to-sequence model is trained on various speech processing tasks, including multilingual speech recognition, speech translation, spoken language identification, and voice activity detection. These tasks are jointly represented as a sequence of tokens to be predicted by the decoder, allowing a single model to replace many stages of a traditional speech-processing pipeline. The multitask training format uses a set of special tokens that serve as task specifiers or classification targets.
