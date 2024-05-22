@@ -9,7 +9,7 @@ Whisper is an automatic speech recognition (ASR) system trained on 680,000 hours
 
 ```bash
 # Approach
-![Screenshot 2024-05-22 084647](https://github.com/INurtureStudent/Whisper-Hindi-ASR-model/assets/120656373/0f8dcd9b-4df9-4dd1-8584-15a5a8cd7276)
+
 A Transformer sequence-to-sequence model is trained on various speech processing tasks, including multilingual speech recognition, speech translation, spoken language identification, and voice activity detection. These tasks are jointly represented as a sequence of tokens to be predicted by the decoder, allowing a single model to replace many stages of a traditional speech-processing pipeline. The multitask training format uses a set of special tokens that serve as task specifiers or classification targets.
 
 # Available models and languages
