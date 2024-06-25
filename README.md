@@ -1,27 +1,65 @@
-# Whisper-Hindi Model:
-Whisper is an automatic speech recognition (ASR) system trained on 680,000 hours of multilingual and multitask supervised data collected from the web.We show that the use of such a large and diverse dataset leads to improved robustness to accents, background noise and technical language.  It enables transcription in multiple languages, as well as translation from those languages into English. We are open-sourcing models and inference code to serve as a foundation for building useful applications and for further research on robust speech processing.
+# Whisper Hindi Model
 
-### Links
-1. [Whisper](https://github.com/openai/whisper)
-2. [Vistaar](https://github.com/AI4Bharat/vistaar)
-3. [ASR Evaluation](https://github.com/belambert/asr-evaluation)
-4. [Test Dataset](https://asr.iitm.ac.in/Gramvaani/NEW/GV_Eval_3h.tar.gz)
+The Whisper Hindi ASR (Automatic Speech Recognition) model utilizes the KathBath dataset, a comprehensive collection of speech samples in Hindi. Trained on this dataset, Whisper employs advanced deep learning techniques to accurately transcribe spoken Hindi into text. Its architecture harnesses the power of neural networks to recognize and interpret the nuances of the Hindi language, including regional accents and dialects. Whisper stands out for its efficiency and accuracy, offering a reliable solution for converting spoken Hindi into written text across various applications, from transcription services to voice-enabled interfaces.
 
-```bash
-# Approach
+The KathBath dataset serves as a crucial foundation for training the Whisper model. This dataset encompasses diverse speech samples sourced from different regions, covering a wide range of topics and conversational styles. The richness and diversity of the data enable Whisper to generalize well across various real-world scenarios, ensuring robust performance in different contexts.
 
-A Transformer sequence-to-sequence model is trained on various speech processing tasks, including multilingual speech recognition, speech translation, spoken language identification, and voice activity detection. These tasks are jointly represented as a sequence of tokens to be predicted by the decoder, allowing a single model to replace many stages of a traditional speech-processing pipeline. The multitask training format uses a set of special tokens that serve as task specifiers or classification targets.
+ASR models not only transcribe speech but also calculate the Word Error Rate (WER) by comparing their output to a reference transcription. This metric quantifies accuracy, with lower WER values indicating better performance.
 
-# Available models and languages
-There are five model sizes, four with English-only versions, offering speed and accuracy tradeoffs. Below are the names of the available models and their approximate memory requirements and inference speed relative to the large model; actual speed may vary depending on many factors including the available hardware.
+## Overview
 
-Size	Parameters	English-only model	Multilingual model	Required VRAM	Relative speed
-tiny	39 M	tiny.en	tiny	~1 GB	~32x
-base	74 M	base.en	base	~1 GB	~16x
-small	244 M	small.en	small	~2 GB	~6x
-medium	769 M	medium.en	medium	~5 GB	~2x
-large	1550 M	N/A	large	~10 GB	1x
-The .en models for English-only applications tend to perform better, especially for the tiny.en and base.en models. We observed that the difference becomes less significant for the small.en and medium.en models.
+This project aims to develop an effective and efficient ASR model for the Hindi language using state-of-the-art techniques. The model leverages the powerful Whisper framework, with additional data and evaluation metrics from Vistaar and ASR Evaluation tools. The primary focus is on enhancing the accuracy and robustness of speech recognition in Hindi.
 
-Whisper's performance varies widely depending on the language. The figure below shows a performance breakdown of large-v3 and large-v2 models by language, using WERs (word error rates) or CER (character error rates, shown in Italic) evaluated on the Common Voice 15 and Fleurs datasets. Additional WER/CER metrics corresponding to the other models and datasets can be found in Appendix D.1, D.2, and D.4 of the paper, as well as the BLEU (Bilingual Evaluation Understudy) scores for translation in Appendix D.3.
+## Datasets
 
+The datasets used in this project are sourced from various platforms:
+
+1. **Whisper**: [Whisper Dataset Link](https://example.com/whisper-dataset)
+2. **Vistaar**: [Vistaar Dataset Link](https://example.com/vistaar-dataset)
+3. **ASR Evaluation**: [ASR Evaluation Dataset Link](https://example.com/asr-evaluation-dataset)
+4. **Test Dataset**: [Test Dataset Link](https://example.com/test-dataset)
+
+Each dataset is carefully preprocessed and annotated to ensure high-quality training and evaluation.
+
+## Model Architecture
+
+The model architecture follows the standard pipeline of Whisper with modifications tailored for the Hindi language. Key components include:
+
+- **Data Preprocessing**: Noise reduction, normalization, and augmentation techniques.
+- **Feature Extraction**: Mel-frequency cepstral coefficients (MFCCs) and other relevant features.
+- **Neural Network**: A deep learning model designed with layers optimized for ASR tasks.
+- **Post-Processing**: Error correction and language modeling for better transcription accuracy.
+
+![model_architecture_image](https://github.com/INurtureStudent/Whisper-Hindi-ASR-model/assets/120656373/53cc2725-0c4b-45ed-98ca-1bb5fd60001f)
+
+## World Error Rate (WER):
+
+Word Error Rate (WER) is a metric used to evaluate the performance of automatic speech recognition (ASR) systems. It measures the disparity between the transcribed output generated by the ASR system and the reference or ground truth transcription.
+WER is calculated as the ratio of the total number of errors (insertions, deletions, and substitutions) required to align the transcribed text with the reference text, divided by the total number of words in the reference text.
+WER provides a comprehensive assessment of the accuracy of ASR systems, taking into account both misrecognitions and omissions of words in the transcription. Lower WER values indicate higher accuracy, with a perfect score of 0 indicating an exact match between the transcribed and reference texts.
+WER is a widely used evaluation metric in the field of speech recognition, providing valuable insights into the performance and quality of ASR models across different languages and applications.
+
+## Setup:
+We used Python 3.9.9 and PyTorch 1.10.1 to train and test our models, but the codebase is expected to be compatible with Python 3.8-3.11 and recent PyTorch versions. The codebase also depends on a few Python packages, most notably OpenAI's tiktoken for their fast tokenizer implementation. You can download and install (or update to) the latest release of Whisper with the following command:
+  '''bash
+  pip install -U openai-whisper
+Alternatively, the following command will pull and install the latest commit from this repository, along with its Python dependencies:
+  pip install git+https://github.com/openai/whisper.git 
+To update the package to the latest version of this repository, please run:
+  pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
+It also requires the command-line tool ffmpeg to be installed on your system, which is available from most package managers:
+  
+  #on Ubuntu or Debian:
+  sudo apt update && sudo apt install ffmpeg
+
+  # on Arch Linux:
+  sudo pacman -S ffmpeg
+
+  # on MacOS using Homebrew (https://brew.sh/):
+  brew install ffmpeg
+
+  # on Windows using Chocolatey (https://chocolatey.org/)
+  choco install ffmpeg
+
+  # on Windows using Scoop (https://scoop.sh/)
+  scoop install ffmpeg
