@@ -39,23 +39,42 @@ WER is calculated as the ratio of the total number of errors (insertions, deleti
 WER provides a comprehensive assessment of the accuracy of ASR systems, taking into account both misrecognitions and omissions of words in the transcription. Lower WER values indicate higher accuracy, with a perfect score of 0 indicating an exact match between the transcribed and reference texts.
 WER is a widely used evaluation metric in the field of speech recognition, providing valuable insights into the performance and quality of ASR models across different languages and applications.
 
-## Setup:
+# Setup
+-----
+
+[](https://github.com/Ayushverma135/Whisper-Hindi-ASR-model-IIT-Bombay-Internship?tab=readme-ov-file#setup)
+
 We used Python 3.9.9 and PyTorch 1.10.1 to train and test our models, but the codebase is expected to be compatible with Python 3.8-3.11 and recent PyTorch versions. The codebase also depends on a few Python packages, most notably OpenAI's tiktoken for their fast tokenizer implementation. You can download and install (or update to) the latest release of Whisper with the following command:
-  '''bash
+
+```
   pip install -U openai-whisper
+
+```
+
 Alternatively, the following command will pull and install the latest commit from this repository, along with its Python dependencies:
-  pip install git+https://github.com/openai/whisper.git 
+
+```
+  pip install git+https://github.com/openai/whisper.git
+
+```
+
 To update the package to the latest version of this repository, please run:
+
+```
   pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
+
+```
+
 It also requires the command-line tool ffmpeg to be installed on your system, which is available from most package managers:
-  
-  # on Ubuntu or Debian:
+
+```
+  #on Ubuntu or Debian
   sudo apt update && sudo apt install ffmpeg
 
-  # on Arch Linux:
+  # on Arch Linux
   sudo pacman -S ffmpeg
 
-  # on MacOS using Homebrew (https://brew.sh/):
+  # on MacOS using Homebrew (https://brew.sh/)
   brew install ffmpeg
 
   # on Windows using Chocolatey (https://chocolatey.org/)
@@ -63,3 +82,4 @@ It also requires the command-line tool ffmpeg to be installed on your system, wh
 
   # on Windows using Scoop (https://scoop.sh/)
   scoop install ffmpeg
+```
