@@ -40,11 +40,10 @@ WER provides a comprehensive assessment of the accuracy of ASR systems, taking i
 WER is a widely used evaluation metric in the field of speech recognition, providing valuable insights into the performance and quality of ASR models across different languages and applications.
 
 # Setup
------
 
-[](https://github.com/Ayushverma135/Whisper-Hindi-ASR-model-IIT-Bombay-Internship?tab=readme-ov-file#setup)
+[](https://github.com/yashshekh/Whisper-Hindi-ASR-model#setup)
 
-We used Python 3.9.9 and PyTorch 1.10.1 to train and test our models, but the codebase is expected to be compatible with Python 3.8-3.11 and recent PyTorch versions. The codebase also depends on a few Python packages, most notably OpenAI's tiktoken for their fast tokenizer implementation. You can download and install (or update to) the latest release of Whisper with the following command:
+I have used Python 3.9.9 and PyTorch 1.10.1 to train and test our models, but the codebase is expected to be compatible with Python 3.8-3.11 and recent PyTorch versions. The codebase also depends on a few Python packages, most notably OpenAI's tiktoken for their fast tokenizer implementation. You can download and install (or update to) the latest release of Whisper with the following command:
 
 ```
   pip install -U openai-whisper
