@@ -14,10 +14,10 @@ This project aims to develop an effective and efficient ASR model for the Hindi 
 
 The datasets used in this project are sourced from various platforms:
 
-1. **Whisper**: [Whisper Dataset Link](https://example.com/whisper-dataset)
-2. **Vistaar**: [Vistaar Dataset Link](https://example.com/vistaar-dataset)
-3. **ASR Evaluation**: [ASR Evaluation Dataset Link](https://example.com/asr-evaluation-dataset)
-4. **Test Dataset**: [Test Dataset Link](https://example.com/test-dataset)
+1. **Whisper**: [Whisper Dataset Link](https://github.com/openai/whisper)
+2. **Vistaar**: [Vistaar Dataset Link](https://github.com/AI4Bharat/vistaar)
+3. **ASR Evaluation**: [ASR Evaluation Dataset Link](https://github.com/belambert/asr-evaluation)
+4. **Test Dataset**: [Test Dataset Link](https://asr.iitm.ac.in/Gramvaani/NEW/GV_Eval_3h.tar.gz)
 
 Each dataset is carefully preprocessed and annotated to ensure high-quality training and evaluation.
 
